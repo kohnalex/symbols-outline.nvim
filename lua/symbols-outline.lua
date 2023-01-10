@@ -113,7 +113,7 @@ local function goto_location(change_focus)
   if change_focus then
     vim.fn.win_gotoid(M.state.code_win)
   end
-  if config.options.auto_close then
+  if config.options.auto_close and change_focus then
     M.close_outline()
   end
 end
